@@ -12,7 +12,7 @@ struct AttendanceTrackingView: View {
     
     // MARK: Stored properties
     
-    // Provides example data for this project
+    // Provides example data for this view
     @State private var dataProvider = ArrivalsDataProvider()
     
     // Toggle whether to show grouped or ungrouped data

@@ -43,3 +43,12 @@ struct ArrivalRow: View {
         )
     }
 }
+
+#Preview {
+    List {
+        ArrivalRow(
+            status: example1,
+            showingHouse: false
+        )
+    }
+}

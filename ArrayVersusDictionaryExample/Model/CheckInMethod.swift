@@ -14,7 +14,6 @@ enum CheckInMethod: Int, Identifiable {
     case manualByEventMonitor = 2
     case notYetDetermined = 3
     
-    
     // MARK: Computed properties
     var id: Int {
         return rawValue

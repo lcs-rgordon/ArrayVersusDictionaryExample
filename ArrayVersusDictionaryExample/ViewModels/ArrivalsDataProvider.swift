@@ -12,10 +12,16 @@ class ArrivalsDataProvider {
     
     // MARK: Stored properties
     
-    // The list of arrivals for the current day
+    // The list of arrivals for the current day (as an array)
     var arrivalStatuses: [ArrivalStatus]
 
     // MARK: Computed properties
+    
+    // The same list of arrivals, but provided as a dictionary
+    //
+    // NOTES:
+    //  Keys are the houses
+    //  Values tied to each key are the students in that house
     var arrivalStatusesByHouse: [String: [ArrivalStatus]] {
         
         return Dictionary(grouping: arrivalStatuses) { currentStatus in

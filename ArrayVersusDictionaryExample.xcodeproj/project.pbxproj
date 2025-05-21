@@ -89,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				81C38A9E2DDE648B008BDC67 /* AttendanceTrackingView.swift */,
-				81C38AA22DDE64D7008BDC67 /* ArrivalListByHouseView.swift */,
 				81C38AA02DDE649D008BDC67 /* ArrivalListView.swift */,
+				81C38AA22DDE64D7008BDC67 /* ArrivalListByHouseView.swift */,
 				81C38A992DDE6443008BDC67 /* Helpers */,
 			);
 			path = Views;
@@ -99,9 +99,9 @@
 		81C38A8F2DDE21C9008BDC67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				81C38A952DDE2267008BDC67 /* ArrivalCategory.swift */,
 				81C38A912DDE221D008BDC67 /* ArrivalStatus.swift */,
 				81C38A932DDE224E008BDC67 /* CheckInMethod.swift */,
+				81C38A952DDE2267008BDC67 /* ArrivalCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

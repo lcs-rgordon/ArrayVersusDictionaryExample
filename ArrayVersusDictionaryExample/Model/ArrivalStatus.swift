@@ -9,6 +9,7 @@ import Foundation
 
 struct ArrivalStatus: Identifiable {
     
+    // MARK: Stored properties
     let id: Int
     let arrivalId: Int?
     let house: String
@@ -20,6 +21,7 @@ struct ArrivalStatus: Identifiable {
     let arrivalCategory: ArrivalCategory?
     let arrivalTime: Date?
     
+    // MARK: Decoding hints (e.g.: If instances of this data type were obtained from a cloud-hosted database)
     enum CodingKeys: String, CodingKey {
         
         case id

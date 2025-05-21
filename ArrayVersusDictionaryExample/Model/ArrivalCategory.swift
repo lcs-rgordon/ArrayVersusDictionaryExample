@@ -9,12 +9,16 @@ import SwiftUI
 
 enum ArrivalCategory: Int, Identifiable {
     
+    // MARK: Cases
     case notYetDetermined = 1
     case onTime = 2
     case absent = 3
     case late = 4
     
-    var id: Int { rawValue }
+    // MARK: Computed properties
+    var id: Int {
+        return rawValue
+    }
 
     var displayName: String {
         switch self {
