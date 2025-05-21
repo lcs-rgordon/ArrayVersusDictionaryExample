@@ -10,9 +10,11 @@ import SwiftUI
 // Shared row view for both list types
 struct ArrivalRow: View {
     
+    // MARK: Stored properties
     let status: ArrivalStatus
     let showingHouse: Bool
     
+    // MARK: Computed properties
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
