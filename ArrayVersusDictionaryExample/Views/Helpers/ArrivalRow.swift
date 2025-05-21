@@ -16,7 +16,7 @@ struct ArrivalRow: View {
             VStack(alignment: .leading) {
                 Text("\(status.firstName) \(status.lastName)")
                     .font(.headline)
-                Text(status.ageCategory)
+                Text(status.house)
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
