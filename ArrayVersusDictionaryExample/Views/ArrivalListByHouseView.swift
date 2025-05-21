@@ -15,10 +15,24 @@ struct ArrivalListByHouseView: View {
 
     // MARK: Computed properties
     var body: some View {
+        
+        // Make a scrollable list
         List {
-            ForEach(Array(dataProvider.arrivalStatusesByHouse.keys.sorted()), id: \.self) { house in
-                Section(header: Text(house)) {
-                    ForEach(dataProvider.arrivalStatusesByHouse[house] ?? []) { status in
+            
+            // Get the keys of the dictionary (which is each house)
+            let houses = dataProvider.arrivalStatusesByHouse.keys.sorted()
+            
+            // Iterate over the houses (keys)
+            ForEach(houses, id: \.self) { currentHouse in
+                
+                // Make a section for each house
+                Section(header: Text(currentHouse)) {
+                    
+                    // Access the values (students) connected to this key (the house)
+                    let studentsInCurrentHouse = dataProvider.arrivalStatusesByHouse[currentHouse]!
+                    
+                    // Iterate over the students
+                    ForEach(studentsInCurrentHouse) { status in
                         ArrivalRow(
                             status: status,
                             showingHouse: false
