@@ -20,7 +20,7 @@ struct AttendanceTrackingView: View {
     
     // MARK: Computed properties
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 if showGroupedView {
                     ArrivalListByHouseView(dataProvider: dataProvider)
@@ -28,6 +28,7 @@ struct AttendanceTrackingView: View {
                     ArrivalListView(dataProvider: dataProvider)
                 }
             }
+            .navigationTitle("Arrivals")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {

@@ -9,16 +9,19 @@ import SwiftUI
 
 // Shared row view for both list types
 struct ArrivalRow: View {
+    
     let status: ArrivalStatus
+    let showingHouse: Bool
     
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             VStack(alignment: .leading) {
                 Text("\(status.firstName) \(status.lastName)")
                     .font(.headline)
                 Text(status.house)
                     .font(.subheadline)
                     .foregroundColor(.gray)
+                    .opacity(showingHouse ? 1.0 : 0.0)
             }
             
             Spacer()
@@ -32,6 +35,9 @@ struct ArrivalRow: View {
 
 #Preview {
     List {
-        ArrivalRow(status: example1)
+        ArrivalRow(
+            status: example1,
+            showingHouse: true
+        )
     }
 }

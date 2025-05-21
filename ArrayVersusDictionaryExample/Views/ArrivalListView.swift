@@ -17,10 +17,12 @@ struct ArrivalListView: View {
     var body: some View {
         List {
             ForEach(dataProvider.arrivalStatuses) { status in
-                ArrivalRow(status: status)
+                ArrivalRow(
+                    status: status,
+                    showingHouse: true
+                )
             }
         }
-        .navigationTitle("All Students")
     }
 }
 

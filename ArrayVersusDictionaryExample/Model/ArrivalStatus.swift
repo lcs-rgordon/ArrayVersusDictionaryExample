@@ -41,7 +41,7 @@ struct ArrivalStatus: Identifiable {
 let example1 = ArrivalStatus(
     id: 1,
     arrivalId: 101,
-    house: "Griffin",
+    house: "Colebrook",
     lastName: "Johnson",
     firstName: "Emma",
     ageCategory: "Senior",
@@ -54,12 +54,12 @@ let example1 = ArrivalStatus(
 
 // Sample student arrival data across 3 houses
 let sampleArrivals: [ArrivalStatus] = [
-    // Griffin House
+    // Colebrook House
     example1,
     ArrivalStatus(
         id: 2,
         arrivalId: 102,
-        house: "Griffin",
+        house: "Colebrook",
         lastName: "Brown",
         firstName: "Sophia",
         ageCategory: "Senior",
@@ -71,7 +71,7 @@ let sampleArrivals: [ArrivalStatus] = [
     ArrivalStatus(
         id: 3,
         arrivalId: 103,
-        house: "Griffin",
+        house: "Colebrook",
         lastName: "Wilson",
         firstName: "Noah",
         ageCategory: "Junior",
@@ -81,11 +81,11 @@ let sampleArrivals: [ArrivalStatus] = [
         arrivalTime: Date().addingTimeInterval(-330) // 5.5 minutes ago
     ),
     
-    // Phoenix House
+    // Grove House
     ArrivalStatus(
         id: 4,
         arrivalId: 104,
-        house: "Phoenix",
+        house: "Grove",
         lastName: "Smith",
         firstName: "Michael",
         ageCategory: "Junior",
@@ -97,7 +97,7 @@ let sampleArrivals: [ArrivalStatus] = [
     ArrivalStatus(
         id: 5,
         arrivalId: 105,
-        house: "Phoenix",
+        house: "Grove",
         lastName: "Garcia",
         firstName: "Isabella",
         ageCategory: "Sophomore",
@@ -109,7 +109,7 @@ let sampleArrivals: [ArrivalStatus] = [
     ArrivalStatus(
         id: 6,
         arrivalId: nil, // No arrival recorded yet
-        house: "Phoenix",
+        house: "Grove",
         lastName: "Martinez",
         firstName: "Daniel",
         ageCategory: "Senior",
@@ -121,7 +121,7 @@ let sampleArrivals: [ArrivalStatus] = [
     ArrivalStatus(
         id: 7,
         arrivalId: 106,
-        house: "Phoenix",
+        house: "Grove",
         lastName: "Taylor",
         firstName: "Olivia",
         ageCategory: "Sophomore",
@@ -131,11 +131,11 @@ let sampleArrivals: [ArrivalStatus] = [
         arrivalTime: Date().addingTimeInterval(-30) // 30 seconds ago
     ),
     
-    // Dragon House
+    // Ondaatje House
     ArrivalStatus(
         id: 8,
         arrivalId: 107,
-        house: "Dragon",
+        house: "Ondaatje",
         lastName: "Lee",
         firstName: "Ethan",
         ageCategory: "Junior",
@@ -147,7 +147,7 @@ let sampleArrivals: [ArrivalStatus] = [
     ArrivalStatus(
         id: 9,
         arrivalId: 108,
-        house: "Dragon",
+        house: "Ondaatje",
         lastName: "Harris",
         firstName: "Ava",
         ageCategory: "Senior",
@@ -159,7 +159,7 @@ let sampleArrivals: [ArrivalStatus] = [
     ArrivalStatus(
         id: 10,
         arrivalId: 109,
-        house: "Dragon",
+        house: "Ondaatje",
         lastName: "Nguyen",
         firstName: "Liam",
         ageCategory: "Freshman",
@@ -177,21 +177,21 @@ let groupedByHouse: [String: [ArrivalStatus]] = Dictionary(grouping: sampleArriv
 
 /* This would result in a dictionary like:
 [
-    "Griffin": [
-        ArrivalStatus(id: 1, house: "Griffin", lastName: "Johnson", firstName: "Emma", ...),
-        ArrivalStatus(id: 2, house: "Griffin", lastName: "Brown", firstName: "Sophia", ...),
-        ArrivalStatus(id: 3, house: "Griffin", lastName: "Wilson", firstName: "Noah", ...)
+    "Colebrook": [
+        ArrivalStatus(id: 1, house: "Colebrook", lastName: "Johnson", firstName: "Emma", ...),
+        ArrivalStatus(id: 2, house: "Colebrook", lastName: "Brown", firstName: "Sophia", ...),
+        ArrivalStatus(id: 3, house: "Colebrook", lastName: "Wilson", firstName: "Noah", ...)
     ],
-    "Phoenix": [
-        ArrivalStatus(id: 4, house: "Phoenix", lastName: "Smith", firstName: "Michael", ...),
-        ArrivalStatus(id: 5, house: "Phoenix", lastName: "Garcia", firstName: "Isabella", ...),
-        ArrivalStatus(id: 6, house: "Phoenix", lastName: "Martinez", firstName: "Daniel", ...),
-        ArrivalStatus(id: 7, house: "Phoenix", lastName: "Taylor", firstName: "Olivia", ...)
+    "Grove": [
+        ArrivalStatus(id: 4, house: "Grove", lastName: "Smith", firstName: "Michael", ...),
+        ArrivalStatus(id: 5, house: "Grove", lastName: "Garcia", firstName: "Isabella", ...),
+        ArrivalStatus(id: 6, house: "Grove", lastName: "Martinez", firstName: "Daniel", ...),
+        ArrivalStatus(id: 7, house: "Grove", lastName: "Taylor", firstName: "Olivia", ...)
     ],
-    "Dragon": [
-        ArrivalStatus(id: 8, house: "Dragon", lastName: "Lee", firstName: "Ethan", ...),
-        ArrivalStatus(id: 9, house: "Dragon", lastName: "Harris", firstName: "Ava", ...),
-        ArrivalStatus(id: 10, house: "Dragon", lastName: "Nguyen", firstName: "Liam", ...)
+    "Ondaatje": [
+        ArrivalStatus(id: 8, house: "Ondaatje", lastName: "Lee", firstName: "Ethan", ...),
+        ArrivalStatus(id: 9, house: "Ondaatje", lastName: "Harris", firstName: "Ava", ...),
+        ArrivalStatus(id: 10, house: "Ondaatje", lastName: "Nguyen", firstName: "Liam", ...)
     ]
 ]
 */

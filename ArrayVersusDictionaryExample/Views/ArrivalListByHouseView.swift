@@ -19,12 +19,14 @@ struct ArrivalListByHouseView: View {
             ForEach(Array(dataProvider.arrivalStatusesByHouse.keys.sorted()), id: \.self) { house in
                 Section(header: Text(house)) {
                     ForEach(dataProvider.arrivalStatusesByHouse[house] ?? []) { status in
-                        ArrivalRow(status: status)
+                        ArrivalRow(
+                            status: status,
+                            showingHouse: false
+                        )
                     }
                 }
             }
         }
-        .navigationTitle("Students by House")
     }
 }
 
